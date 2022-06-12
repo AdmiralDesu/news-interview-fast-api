@@ -27,7 +27,7 @@ class MosDay:
 
     @property
     def get_publish_date(self):
-        return self.news_table[0].find('b').text
+        return ".".join(self.news_table[0].find('b').text.split('.')[::-1])
 
     @property
     def extract_idx(self) -> int:
