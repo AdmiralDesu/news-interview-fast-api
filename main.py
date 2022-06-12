@@ -109,7 +109,7 @@ async def redirect():
 
 
 @app.on_event('startup')
-@repeat_every(seconds=10, wait_first=False, raise_exceptions=True)
+@repeat_every(seconds=60 * 10, wait_first=False, raise_exceptions=True)
 async def update() -> None:
     news_tuple = parser.get_all_news()
 
